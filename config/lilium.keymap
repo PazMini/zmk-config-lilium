@@ -4,7 +4,7 @@
         zmk,physical-layout = &lilium_layout;
     };
 
-    lilium_layout: lilium_layout {
+    &physical_layout0 {
         compatible = "zmk,physical-layout";
         display-name = "LiLium";
 
