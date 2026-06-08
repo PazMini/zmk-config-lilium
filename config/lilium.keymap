@@ -8,7 +8,7 @@
         compatible = "zmk,physical-layout";
         display-name = "LiLium";
 
-        transform = <&keymap_transform0>;
+        transform = <&default_transform>;
 
     };
 };
