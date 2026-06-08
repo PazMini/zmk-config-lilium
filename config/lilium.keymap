@@ -11,13 +11,6 @@
         transform = <&default_transform>;
 
     };
-
-
-    default_transform: transform {
-        compatible = "zmk,matrix-transform";
-        rows = <6>;
-        cols = <12>;
-    };
 };
 
 #include <behaviors.dtsi>
