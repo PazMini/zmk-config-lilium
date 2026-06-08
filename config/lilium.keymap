@@ -6,9 +6,9 @@
 
     lilium_layout: lilium_layout {
         compatible = "zmk,physical-layout";
-        display-name = "Lilium";
+        display-name = "LiLium";
 
-        transform = <&default_transform>;
+        transform = <&default_transform0>;
 
     };
 };
