@@ -55,13 +55,22 @@ RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,5)                 RC(5,6) RC(5,7) 
         kscan = <&kscan0>; // Label of the kscan node, optional if all layouts use the same
         transform = <&default_transform>; // Label of the matrix transform for this layout
 
-    keys = <
-      0 0   1 0   2 0   3 0   4 0   5 0   6 0   7 0   8 0   9 0   10 0  11 0
-      0 1   1 1   2 1   3 1   4 1   5 1   6 1   7 1   8 1   9 1   10 1  11 1
-      0 2   1 2   2 2   3 2   4 2   5 2   6 2   7 2   8 2   9 2   10 2  11 2
-      0 3   1 3   2 3   3 3   4 3   5 3   6 3   7 3   8 3   9 3   10 3  11 3
-      0 4   1 4   2 4   3 4   4 4   5 4   6 4   7 4   8 4   9 4   10 4  11 4
-    >;
+        keys = <
+        &default_transform 0 0   &default_transform 0 1   &default_transform 0 2   &default_transform 0 3   &default_transform 0 4   &default_transform 0 5
+        &default_transform 0 6   &default_transform 0 7   &default_transform 0 8   &default_transform 0 9   &default_transform 0 10  &default_transform 0 11
+
+        &default_transform 1 0   &default_transform 1 1   &default_transform 1 2   &default_transform 1 3   &default_transform 1 4   &default_transform 1 5
+        &default_transform 1 6   &default_transform 1 7   &default_transform 1 8   &default_transform 1 9   &default_transform 1 10  &default_transform 1 11
+
+        &default_transform 2 0   &default_transform 2 1   &default_transform 2 2   &default_transform 2 3   &default_transform 2 4   &default_transform 2 5
+        &default_transform 2 6   &default_transform 2 7   &default_transform 2 8   &default_transform 2 9   &default_transform 2 10  &default_transform 2 11
+
+        &default_transform 3 0   &default_transform 3 1   &default_transform 3 2   &default_transform 3 3   &default_transform 3 4   &default_transform 3 5
+        &default_transform 3 6   &default_transform 3 7   &default_transform 3 8   &default_transform 3 9   &default_transform 3 10  &default_transform 3 11
+
+        &default_transform 4 0   &default_transform 4 1   &default_transform 4 2   &default_transform 4 3   &default_transform 4 4   &default_transform 4 5
+        &default_transform 4 6   &default_transform 4 7   &default_transform 4 8   &default_transform 4 9   &default_transform 4 10  &default_transform 4 11
+        >;
 
     };
 
