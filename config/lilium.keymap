@@ -1,17 +1,14 @@
 
-/ {
-    chosen {
-        zmk,physical-layout = &lilium_layout;
-    };
 
-    &physical_layout0 {
-        compatible = "zmk,physical-layout";
-        display-name = "LiLium";
 
-        transform = <&default_transform>;
+&physical_layout0 {
+    compatible = "zmk,physical-layout";
+    display-name = "LiLium";
 
-    };
+    transform = <&default_transform>;
+
 };
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
