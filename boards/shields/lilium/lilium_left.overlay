@@ -1,8 +1,5 @@
 #include "lilium.dtsi"
 
-chosen {
-    zmk,physical-layout = &physical_layout0;
-};
 
 
 &kscan0 {
