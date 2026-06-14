@@ -9,6 +9,10 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
 config ZMK_BLE
     default y
 
+config ZMK_USB   
+    default y 
+
+
 endif
 
 if SHIELD_LILIUM_LEFT || SHIELD_LILIUM_RIGHT
@@ -18,8 +22,5 @@ config ZMK_SPLIT
 
 config ZMK_SPLIT_BLE
 	default y
-
-config ZMK_USB   
-    default y 
 
 endif
