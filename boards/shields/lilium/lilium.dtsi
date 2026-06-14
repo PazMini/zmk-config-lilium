@@ -53,7 +53,8 @@
 
     physical_layout_keys {
         compatible = "zmk,physical-layout-keys";
-
+        #key-cells = <0>;
+        
         /* Row 0 */
         k0:  key_0  { x = <0>;    y = <0>;   w = <100>; h = <100>; };
         k1:  key_1  { x = <100>;  y = <0>;   w = <100>; h = <100>; };
