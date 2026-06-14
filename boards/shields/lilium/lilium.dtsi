@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-
+#include <physical_layouts.dtsi
 / {
     chosen {
         zmk,kscan = &kscan0;
@@ -49,108 +49,87 @@
 
     };
 
-
-
-    
-physical_layout_keys {
-    compatible = "zmk,physical-layout-keys";
-
-#define KEY(xpos, ypos) \
-    #key-cells = <0>; \
-    x = <xpos>; \
-    y = <ypos>; \
-    w = <100>; \
-    h = <100>;
-
-    /* Row 0 */
-    k0:  key_0  { KEY(0,0) };
-    k1:  key_1  { KEY(100,0) };
-    k2:  key_2  { KEY(200,0) };
-    k3:  key_3  { KEY(300,0) };
-    k4:  key_4  { KEY(400,0) };
-    k5:  key_5  { KEY(500,0) };
-    k6:  key_6  { KEY(700,0) };
-    k7:  key_7  { KEY(800,0) };
-    k8:  key_8  { KEY(900,0) };
-    k9:  key_9  { KEY(1000,0) };
-    k10: key_10 { KEY(1100,0) };
-    k11: key_11 { KEY(1200,0) };
-
-    /* Row 1 */
-    k12: key_12 { KEY(0,100) };
-    k13: key_13 { KEY(100,100) };
-    k14: key_14 { KEY(200,100) };
-    k15: key_15 { KEY(300,100) };
-    k16: key_16 { KEY(400,100) };
-    k17: key_17 { KEY(500,100) };
-    k18: key_18 { KEY(700,100) };
-    k19: key_19 { KEY(800,100) };
-    k20: key_20 { KEY(900,100) };
-    k21: key_21 { KEY(1000,100) };
-    k22: key_22 { KEY(1100,100) };
-    k23: key_23 { KEY(1200,100) };
-
-    /* Row 2 */
-    k24: key_24 { KEY(0,200) };
-    k25: key_25 { KEY(100,200) };
-    k26: key_26 { KEY(200,200) };
-    k27: key_27 { KEY(300,200) };
-    k28: key_28 { KEY(400,200) };
-    k29: key_29 { KEY(500,200) };
-    k30: key_30 { KEY(700,200) };
-    k31: key_31 { KEY(800,200) };
-    k32: key_32 { KEY(900,200) };
-    k33: key_33 { KEY(1000,200) };
-    k34: key_34 { KEY(1100,200) };
-    k35: key_35 { KEY(1200,200) };
-
-    /* Row 3 */
-    k36: key_36 { KEY(0,300) };
-    k37: key_37 { KEY(100,300) };
-    k38: key_38 { KEY(200,300) };
-    k39: key_39 { KEY(300,300) };
-    k40: key_40 { KEY(400,300) };
-    k41: key_41 { KEY(500,300) };
-    k42: key_42 { KEY(700,300) };
-    k43: key_43 { KEY(800,300) };
-    k44: key_44 { KEY(900,300) };
-    k45: key_45 { KEY(1000,300) };
-    k46: key_46 { KEY(1100,300) };
-    k47: key_47 { KEY(1200,300) };
-
-    /* Row 4 */
-    k48: key_48 { KEY(0,400) };
-    k49: key_49 { KEY(100,400) };
-    k50: key_50 { KEY(200,400) };
-    k51: key_51 { KEY(300,400) };
-    k52: key_52 { KEY(400,400) };
-    k53: key_53 { KEY(500,400) };
-    k54: key_54 { KEY(700,400) };
-    k55: key_55 { KEY(800,400) };
-    k56: key_56 { KEY(900,400) };
-    k57: key_57 { KEY(1000,400) };
-    k58: key_58 { KEY(1100,400) };
-    k59: key_59 { KEY(1200,400) };
-};
-
-
     physical_layouts {
-        compatible = "zmk,physical-layouts";
+    compatible = "zmk,physical-layouts";
 
-        physical_layout0: physical_layout0 {
-            compatible = "zmk,physical-layout";
-            display-name = "Default Layout";
-            transform = <&default_transform>;
+    physical_layout0: physical_layout0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
 
-            keys = <
-                &k0 &k1 &k2 &k3 &k4 &k5 &k6 &k7 &k8 &k9 &k10 &k11
-                &k12 &k13 &k14 &k15 &k16 &k17 &k18 &k19 &k20 &k21 &k22 &k23
-                &k24 &k25 &k26 &k27 &k28 &k29 &k30 &k31 &k32 &k33 &k34 &k35
-                &k36 &k37 &k38 &k39 &k40 &k41 &k42 &k43 &k44 &k45 &k46 &k47
-                &k48 &k49 &k50 &k51 &k52 &k53 &k54 &k55 &k56 &k57 &k58 &k59
-            >;
-        };
+        keys =
+
+             /* Row 0 */
+            <&key_physical_attrs 100 100   0    0   0 0 0>,
+            <&key_physical_attrs 100 100 100   0   0 0 0>,
+            <&key_physical_attrs 100 100 200   0   0 0 0>,
+            <&key_physical_attrs 100 100 300   0   0 0 0>,
+            <&key_physical_attrs 100 100 400   0   0 0 0>,
+            <&key_physical_attrs 100 100 500   0   0 0 0>,
+            <&key_physical_attrs 100 100 700   0   0 0 0>,
+            <&key_physical_attrs 100 100 800   0   0 0 0>,
+            <&key_physical_attrs 100 100 900   0   0 0 0>,
+            <&key_physical_attrs 100 100 1000  0   0 0 0>,
+            <&key_physical_attrs 100 100 1100  0   0 0 0>,
+            <&key_physical_attrs 100 100 1200  0   0 0 0>,
+
+            /* Row 1 */
+            <&key_physical_attrs 100 100   0  100   0 0 0>,
+            <&key_physical_attrs 100 100 100  100   0 0 0>,
+            <&key_physical_attrs 100 100 200  100   0 0 0>,
+            <&key_physical_attrs 100 100 300  100   0 0 0>,
+            <&key_physical_attrs 100 100 400  100   0 0 0>,
+            <&key_physical_attrs 100 100 500  100   0 0 0>,
+            <&key_physical_attrs 100 100 700  100   0 0 0>,
+            <&key_physical_attrs 100 100 800  100   0 0 0>,
+            <&key_physical_attrs 100 100 900  100   0 0 0>,
+            <&key_physical_attrs 100 100 1000 100   0 0 0>,
+            <&key_physical_attrs 100 100 1100 100   0 0 0>,
+            <&key_physical_attrs 100 100 1200 100   0 0 0>;
+            
+            /* Row 2 */
+            <&key_physical_attrs 100 100   0  200   0 0 0>,
+            <&key_physical_attrs 100 100 100  200   0 0 0>,
+            <&key_physical_attrs 100 100 200  200   0 0 0>,
+            <&key_physical_attrs 100 100 300  200   0 0 0>,
+            <&key_physical_attrs 100 100 400  200   0 0 0>,
+            <&key_physical_attrs 100 100 500  200   0 0 0>,
+            <&key_physical_attrs 100 100 700  200   0 0 0>,
+            <&key_physical_attrs 100 100 800  200   0 0 0>,
+            <&key_physical_attrs 100 100 900  200   0 0 0>,
+            <&key_physical_attrs 100 100 1000 200   0 0 0>,
+            <&key_physical_attrs 100 100 1100 200   0 0 0>,
+            <&key_physical_attrs 100 100 1200 200   0 0 0>,
+
+            /* Row 3 */
+            <&key_physical_attrs 100 100   0  300   0 0 0>,
+            <&key_physical_attrs 100 100 100  300   0 0 0>,
+            <&key_physical_attrs 100 100 200  300   0 0 0>,
+            <&key_physical_attrs 100 100 300  300   0 0 0>,
+            <&key_physical_attrs 100 100 400  300   0 0 0>,
+            <&key_physical_attrs 100 100 500  300   0 0 0>,
+            <&key_physical_attrs 100 100 700  300   0 0 0>,
+            <&key_physical_attrs 100 100 800  300   0 0 0>,
+            <&key_physical_attrs 100 100 900  300   0 0 0>,
+            <&key_physical_attrs 100 100 1000 300   0 0 0>,
+            <&key_physical_attrs 100 100 1100 300   0 0 0>,
+            <&key_physical_attrs 100 100 1200 300   0 0 0>,
+
+            /* Row 4 */
+            <&key_physical_attrs 100 100   0  400   0 0 0>,
+            <&key_physical_attrs 100 100 100  400   0 0 0>,
+            <&key_physical_attrs 100 100 200  400   0 0 0>,
+            <&key_physical_attrs 100 100 300  400   0 0 0>,
+            <&key_physical_attrs 100 100 400  400   0 0 0>,
+            <&key_physical_attrs 100 100 500  400   0 0 0>,
+            <&key_physical_attrs 100 100 700  400   0 0 0>,
+            <&key_physical_attrs 100 100 800  400   0 0 0>,
+            <&key_physical_attrs 100 100 900  400   0 0 0>,
+            <&key_physical_attrs 100 100 1000 400   0 0 0>,
+            <&key_physical_attrs 100 100 1100 400   0 0 0>,
+            <&key_physical_attrs 100 100 1200 400   0 0 0>;
     };
+};
 
 
     split: split {
