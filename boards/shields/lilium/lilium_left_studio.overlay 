@@ -1,0 +1,34 @@
+/ {
+    chosen {
+        zmk,physical-layout = &physical_layout0;
+    };
+
+    physical_layouts {
+        compatible = "zmk,physical-layouts";
+
+        physical_layout0: physical_layout_0 {
+            compatible = "zmk,physical-layout";
+            display-name = "Lilium";
+
+            kscan = <&kscan0>;
+            transform = <&default_transform>;
+
+            keys = <
+                &kscan0 0 0   0 0   1 1 0
+                &kscan0 0 1   1 0   1 1 0
+                &kscan0 0 2   2 0   1 1 0
+                &kscan0 0 3   3 0   1 1 0
+                &kscan0 0 4   4 0   1 1 0
+                &kscan0 0 5   5 0   1 1 0
+                &kscan0 0 6   7 0   1 1 0
+                &kscan0 0 7   8 0   1 1 0
+                &kscan0 0 8   9 0   1 1 0
+                &kscan0 0 9  10 0   1 1 0
+                &kscan0 0 10 11 0   1 1 0
+                &kscan0 0 11 12 0   1 1 0
+
+                /* rows 1–4 MUST also be defined */
+            >;
+        };
+    };
+};
